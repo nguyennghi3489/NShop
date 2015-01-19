@@ -4,20 +4,49 @@ header {
   margin: 0px auto;
   height: 120px;
 }
-header p {
+header > p {
   float: left;
   width: 200px;
   margin: 0;
+  background: url('../img/logo.png') no-repeat;
+  height: 120px;
+  text-indent: -9999px;
 }
-header nav {
-  margin-left: 250px;
+header > nav {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
   float: right;
 }
-header nav ul li {
+header > nav ul li {
   display: inline-block;
   list-style-type: none;
   padding: 0 20px;
+}
+@media only screen and (max-width: 640px) {
+  header {
+    height: auto;
+    overflow: hidden;
+  }
+  header > p {
+    margin: 0 auto;
+    float: none;
+    height: 90px;
+    background-size: 80%;
+  }
+  header nav {
+    top: 0;
+    transform: none;
+    float: none;
+    text-align: center;
+  }
+  header nav ul {
+    display: inline-table;
+    width: auto;
+    white-space: nowrap;
+    margin: 0 auto;
+  }
+  header nav ul li {
+    padding: 0 15px;
+  }
 }

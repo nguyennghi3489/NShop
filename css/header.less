@@ -5,13 +5,15 @@ header{
 	width:100%;
 	margin:0px auto;
 	height:120px;
-	p{
+	&>p{
 		float:left;
 		width:200px;
 		margin:0;
+		background:url('../img/logo.png') no-repeat;
+		height:120px;
+		text-indent:-9999px;
 	}
-	nav{
-		margin-left:250px;
+	&>nav{
 		position: relative;
 		top: 50%;
 		transform: translateY(-50%);
@@ -22,6 +24,31 @@ header{
 				padding:0 20px;
 			}
 		}
-		float:right;
+		float:right;		
+	}
+	@media only screen and (max-width: @sm-screen){
+		height:auto;
+		overflow:hidden;
+		&>p{
+			margin:0 auto;
+			float:none;
+			height:90px;
+			background-size:80%;
+		}
+		nav{
+			top:0;
+			transform:none;
+			float:none;
+			text-align:center;
+			ul{
+				display:inline-table;
+				width:auto;
+				white-space: nowrap;
+				margin:0 auto;
+				li{
+					padding:0 15px;
+				}
+			}
+		}
 	}
 }

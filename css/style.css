@@ -1,37 +1,157 @@
 @import "reset.css";
-p.logo {
-  background: url('../img/logo.png') no-repeat;
-  height: 120px;
-  text-indent: -9999px;
-}
 header {
   max-width: 1280px;
   width: 100%;
   margin: 0px auto;
   height: 120px;
 }
-header p {
+header > p {
   float: left;
   width: 200px;
   margin: 0;
+  background: url('../img/logo.png') no-repeat;
+  height: 120px;
+  text-indent: -9999px;
 }
-header nav {
-  margin-left: 250px;
+header > nav {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
   float: right;
 }
-header nav ul li {
+header > nav ul li {
   display: inline-block;
   list-style-type: none;
   padding: 0 20px;
+}
+@media only screen and (max-width: 640px) {
+  header {
+    height: auto;
+    overflow: hidden;
+  }
+  header > p {
+    margin: 0 auto;
+    float: none;
+    height: 90px;
+    background-size: 80%;
+  }
+  header nav {
+    top: 0;
+    transform: none;
+    float: none;
+    text-align: center;
+  }
+  header nav ul {
+    display: inline-table;
+    width: auto;
+    white-space: nowrap;
+    margin: 0 auto;
+  }
+  header nav ul li {
+    padding: 0 15px;
+  }
+}
+footer {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+nav.filter {
+  max-width: 200px;
+  width: 100%;
+  float: left;
+}
+nav.filter ul li {
+  border-bottom: 1px solid #ddd;
+  margin: 0px 0px 10px;
+  padding: 0px 0px 3px;
+}
+@media only screen and (max-width: 640px) {
+  nav.filter {
+    display: none;
+  }
+}
+.BoxSizing {
+  -moz-box-sizing: border-box;
+  /* Firefox 1, probably can drop this */
+  -webkit-box-sizing: border-box;
+  /* Safari 3-4, also probably droppable */
+  box-sizing: border-box;
+  /* Everything else */
 }
 .wrapper {
   max-width: 1280px;
   width: 100%;
   margin: 0px auto;
+  padding: 0 0px 0px 20px;
+  -moz-box-sizing: border-box;
+  /* Firefox 1, probably can drop this */
+  -webkit-box-sizing: border-box;
+  /* Safari 3-4, also probably droppable */
+  box-sizing: border-box;
+  /* Everything else */
+  overflow: hidden;
+  clear: both;
+}
+@media only screen and (max-width: 640px) {
+  .wrapper {
+    margin: 30px auto;
+  }
+}
+.row {
+  margin: 0 -10px;
+  -moz-box-sizing: border-box;
+  /* Firefox 1, probably can drop this */
+  -webkit-box-sizing: border-box;
+  /* Safari 3-4, also probably droppable */
+  box-sizing: border-box;
+  /* Everything else */
+}
+.row:before,
+.row:after {
+  display: table;
+  content: " ";
+  clear: both;
+}
+[class^='col'] {
+  padding: 0 10px;
+  float: left;
+  position: relative;
+  min-height: 1px;
+  -moz-box-sizing: border-box;
+  /* Firefox 1, probably can drop this */
+  -webkit-box-sizing: border-box;
+  /* Safari 3-4, also probably droppable */
+  box-sizing: border-box;
+  /* Everything else */
+}
+.col-sm-25 {
+  width: 25%;
+}
+.col-sm-50 {
+  width: 50%;
+}
+@media only screen and (min-width: 641px) {
+  .col-md-25 {
+    width: 25%;
+  }
+}
+@media only screen and (min-width: 769px) {
+  .col-lg-25 {
+    width: 25%;
+  }
+  .col-lg-50 {
+    width: 50%;
+  }
+}
+.content {
+  background: #ddd;
+  width: 100%;
+  height: 50px;
 }
 main {
-  clear: both;
+  float: right;
+  width: 100%;
+  max-width: 1020px;
 }

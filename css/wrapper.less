@@ -1,7 +1,15 @@
 @import "variables.less";
+@import "utilities.less";
 
 .wrapper{
 	max-width:@wrapper-width;
 	width:100%;
 	margin:0px auto;
+	padding:0 0px 0px 20px;
+	.BoxSizing;
+	overflow:hidden;
+	@media only screen and (max-width: @sm-screen){
+		margin:30px auto;
+	}
+	clear:both;
 }
