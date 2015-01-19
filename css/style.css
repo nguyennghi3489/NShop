@@ -1,0 +1,37 @@
+@import "reset.css";
+p.logo {
+  background: url('../img/logo.png') no-repeat;
+  height: 120px;
+  text-indent: -9999px;
+}
+header {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0px auto;
+  height: 120px;
+}
+header p {
+  float: left;
+  width: 200px;
+  margin: 0;
+}
+header nav {
+  margin-left: 250px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  float: right;
+}
+header nav ul li {
+  display: inline-block;
+  list-style-type: none;
+  padding: 0 20px;
+}
+.wrapper {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0px auto;
+}
+main {
+  clear: both;
+}

@@ -1,0 +1,15 @@
+<section> 
+				<blockquote>
+				<b>Stars: {{productCtrl.product.name}}</b> {{productCtrl.product.price}}
+				<cite>by: {{productCtrl.product.description}}</cite>
+				</blockquote>
+				<div class="panel" > 
+					<form name="reviewForm" ng-submit="reviewForm.$valid && productCtrl.addProduct(store)" novalidate>
+						<input type="text" ng-model="productCtrl.product.name" required> 
+						<input type="text" ng-model="productCtrl.product.price" required>
+						<input type="text" ng-model="productCtrl.product.description" required>
+						<div> reviewForm is {{reviewForm.$valid}} </div>
+						<input type="submit" value="Submit">
+					</form>
+				</div>
+			</section>
