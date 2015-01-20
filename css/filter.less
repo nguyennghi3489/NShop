@@ -2,14 +2,26 @@
 
 nav{
 	&.filter{
-		max-width:200px;
-		width:100%;
+		width:18%;
 		float:left;
 		ul{
 			li{
 				border-bottom:1px solid #ddd;
-				margin:0px 0px 10px;
+				margin:0px 0px 20px;
 				padding:0px 0px 3px;
+			}
+		}
+		@media only screen and (max-width: @lg-screen){
+			display:block;
+			width:100%;
+			float:none;
+			clear:both;
+			ul{
+				li{ 
+					display:inline-block;
+					border:0px;
+					padding:0px 10px 0px 0px;
+				}
 			}
 		}
 		@media only screen and (max-width: @sm-screen){

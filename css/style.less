@@ -7,9 +7,15 @@
 @import "variables.less";
 @import "utilities.less";
 @import "grid.less";
+@import "button.less";
+@import "img.less";
+@import "table.less";
 @import "test.less";
 main{
 	float:right;
-	width:100%;
-	max-width:1020px;
+	width:80%;
+
+	@media only screen and (max-width: @lg-screen){
+		width:100%;
+	}
 }
