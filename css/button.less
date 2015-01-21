@@ -1,3 +1,5 @@
+@import "variables.less";
+
 button{
 	background: lighten(@base-color,0%);
 	color:white;
@@ -34,5 +36,26 @@ button{
 		.btn-bg{
 			top:0;
 		}
+	}
+
+	&.detail{
+		background: lighten(@light-color,0%);
+		border-bottom:3px solid darken(@light-color,10%);
+		.btn-bg{
+			background:linear-gradient(to bottom, lighten(@light-color,25%), lighten(@light-color,10%));
+		}
+	}
+	&.submit{
+		background: darken(@dark-color,0%);
+		border-bottom:3px solid darken(@dark-color,10%);
+		.btn-bg{
+			background:linear-gradient(to bottom, darken(@dark-color,25%), darken(@dark-color,10%));
+		}
+	}
+	&.large{
+		padding:1em 5em;
+	}
+	&.small{
+		padding:1em 1em;
 	}
 }

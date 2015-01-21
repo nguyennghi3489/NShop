@@ -3,3 +3,9 @@
    -webkit-box-sizing: border-box;   /* Safari 3-4, also probably droppable */
     box-sizing:        border-box;   /* Everything else */
 }
+.trans (@trans) {
+	-webkit-transition: all @trans;
+    -moz-transition: all @trans;
+    -o-transition: all @trans;
+    transition: all @trans;
+}

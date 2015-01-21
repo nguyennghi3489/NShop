@@ -1,0 +1,138 @@
+.BoxSizing {
+  -moz-box-sizing: border-box;
+  /* Firefox 1, probably can drop this */
+  -webkit-box-sizing: border-box;
+  /* Safari 3-4, also probably droppable */
+  box-sizing: border-box;
+  /* Everything else */
+}
+.ngallery-slider {
+  width: 100%;
+  position: relative;
+}
+.ngallery-slider:after {
+  content: "";
+  display: table;
+  float: none;
+  clear: both;
+}
+.ngallery-slider:before {
+  content: "";
+  display: table;
+  float: none;
+  clear: both;
+}
+.ngallery-slider .nthumbslider {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+.ngallery-slider .nthumbslider li {
+  float: left;
+  margin-right: 5px;
+}
+.ngallery-slider .nthumbslider li a {
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: radial-gradient(75% 75%, #969696, rgba(255, 255, 255, 0));
+  border-radius: 16px;
+  opacity: .4;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.ngallery-slider .nthumbslider li a:hover {
+  background: -webkit-radial-gradient(75% 75%, #54c1cf, #ffffff, rgba(255, 255, 255, 0));
+  /* Safari 5.1 to 6.0 */
+  background: -o-radial-gradient(75% 75%, #54c1cf, #ffffff, rgba(255, 255, 255, 0));
+  /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(75% 75%, #54c1cf, #ffffff, rgba(255, 255, 255, 0));
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(75% 75%, #474a6a, #ffffff, rgba(255, 255, 255, 0));
+  /* Standard syntax */
+  border-radius: 16px;
+}
+.ngallery-slider .nthumbslider .active {
+  background: -webkit-radial-gradient(75% 75%, #54c1cf, #ffffff, rgba(255, 255, 255, 0));
+  /* Safari 5.1 to 6.0 */
+  background: -o-radial-gradient(75% 75%, #54c1cf, #ffffff, rgba(255, 255, 255, 0));
+  /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(75% 75%, #54c1cf, #ffffff, rgba(255, 255, 255, 0));
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(75% 75%, #474a6a, #ffffff, rgba(255, 255, 255, 0));
+  /* Standard syntax */
+  border-radius: 16px;
+}
+.ngallery-slider .control {
+  position: absolute;
+  width: 1000px;
+  top: 200px;
+  height: 92px;
+  overflow: hidden;
+}
+.ngallery-slider .control .button {
+  width: 34px;
+  height: 92px;
+  display: block;
+  position: absolute;
+  top: 0;
+  opacity: .4;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  background: url("../img/gallery-button.png") no-repeat;
+}
+.ngallery-slider .control .button:hover {
+  opacity: 1;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.ngallery-slider .control .prev {
+  width: 34px;
+  height: 92px;
+  display: block;
+  position: absolute;
+  top: 0;
+  opacity: .4;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  background: url("../img/gallery-button.png") no-repeat;
+  background-position: 0 0;
+  left: 0;
+}
+.ngallery-slider .control .prev:hover {
+  opacity: 1;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.ngallery-slider .control .next {
+  width: 34px;
+  height: 92px;
+  display: block;
+  position: absolute;
+  top: 0;
+  opacity: .4;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  background: url("../img/gallery-button.png") no-repeat;
+  background-position: -44px 0;
+  right: 0;
+}
+.ngallery-slider .control .next:hover {
+  opacity: 1;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}

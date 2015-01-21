@@ -1,0 +1,65 @@
+form{
+	font-family:Arial, Helvetica, sans-serif;
+	.form-row{
+		font-size:1em;
+		margin-bottom:1em;
+		label{
+			margin-right:5px;
+			float:left;
+			width:100px;
+		}
+		input{
+			width:300px;
+		}
+		input[type="text"],input[type="password"]{
+			outline:@base-color;
+			border:0;
+			border:1px solid lighten(@dark-color,50%);
+			padding:0.3em;
+			color:@dark-color;
+			font-size:1em;
+			.trans(0.5s);		
+			&:active,&:focus{
+				border:1px solid @base-color;
+			}
+		}
+		input[type="checkbox"]{
+			width:auto;	
+		}
+		#checkbox-1 {
+		    display: none;
+		}
+
+		#checkbox-1 + label { 
+		    color: red;
+		}
+
+		#checkbox-1:checked + label {
+		    color: blue;
+		}
+		select{	
+			border:1px solid @dark-color;
+			font-size:1em;
+			color:@dark-color;
+			outline:0;
+			&:active,&:focus{
+				border:1px solid @base-color;
+			}
+		}
+		textarea{
+			outline:0;
+			font-family:Arial, Helvetica, sans-serif;
+			border:1px solid lighten(@dark-color,50%);
+			font-size:1em;
+			color:@dark-color;
+			width:300px;
+			height:200px;
+			resize: none;
+			display:inline-block;
+			.trans(0.5s);	
+			&:active,&:focus{
+				border:1px solid @base-color;
+			}
+		}
+	}
+}

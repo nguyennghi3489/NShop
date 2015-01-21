@@ -24,7 +24,15 @@
 		<div class="wrapper">
 			<nav class="filter">
 				<ul>
-					<li>Shoes</li>
+					<li><a href="#">Shoes</a>
+						<ul>
+							<li>Shoes 1</li>
+							<li>Shoes 2</li>
+							<li>Shoes 3</li>
+							<li>Shoes 4</li>
+						</ul>
+					</li>
+
 					<li>Scarf</li>
 					<li>Shirt</li>
 					<li>Necklace</li>
@@ -103,20 +111,97 @@
 				</table>
 
 				<h1>Feature</h1>
-				<div class="row">
-					<div class="col-sm-50 col-lg-25">
-						<img src="img/img1.jpg" class="img-responsive">
-						<h4>Kouou</h4>
-						<p>Famous Perfume</p>
-						<p>400$</p>
+				<h2>Item Panel</h2>
+				<div class="item-panel">
+					<div class="row">
+						<div class="col-sm-50 col-lg-25">
+							<div class="item">
+								<img src="img/img1.jpg" class="img-responsive">
+								<h4>Kouou</h4>
+								<p>Famous Perfume</p>
+								<strong>400$</strong>
+								<button>Buy It</button>
+							</div>
+						</div>
+						<div class="col-sm-50 col-lg-25">
+							<div class="item">
+								<img src="img/img1.jpg" class="img-responsive">
+								<h4>Kouou</h4>
+								<p>Famous Perfume</p>
+								<strong>400$</strong>
+								<button>Buy It</button>
+							</div>
+						</div>
+						<div class="col-sm-50 col-lg-25">
+							<div class="item">
+								<img src="img/img1.jpg" class="img-responsive">
+								<h4>Kouou</h4>
+								<p>Famous Perfume</p>
+								<strong>400$</strong>
+								<button class="small">Buy It</button>
+							</div>
+						</div>
+						<div class="col-sm-50 col-lg-25">
+							<div class="item">
+								<img src="img/img1.jpg" class="img-responsive">
+								<h4>Kouou</h4>
+								<p>Famous Perfume</p>
+								<strong>400$</strong>
+								<button class="large">Buy It</button>
+							</div>
+						</div>
 					</div>
 				</div>
 
+				<h2>Gallery Panel</h2>
+				<div class="ngallery-slider">
+					<div class="slider-item" data-img="img/img2.jpg"></div>
+					<div class="slider-item" data-img="img/img3.jpg"></div>
+					<div class="slider-item" data-img="img/img4.jpg"></div>
+				</div>
+
+				<h1>Form</h1>
+				<form>
+					<div class="form-row">
+						<label>Username</label>
+						<input type="text" placeholder="Username">
+					</div>
+					<div class="form-row">
+						<label>Password</label>
+						<input type="password" placeholder="Username">
+					</div>
+					<div class="form-row">
+						<label>Select</label>
+						<select>
+							<option>Necklace</option>
+							<option>Dress</option>
+							<option>Jean</option>
+							<option>Shirt</option>
+						</select>
+					</div>
+					<div class="form-row">
+						<label>Description</label>
+						<textarea>Hello World</textarea>
+					</div>
+					<div class="form-row">
+						<label for="Male" >Gender</label>
+						<input type="checkbox" id="Male" name="Male">
+
+						<input type="checkbox" name="Female">
+					</div>
+					<div class="form-row">
+						<button class="submit">Submit</button>
+					</div>
+				</form>
 			</main>
 		</div>
 		<footer>
 			Clothes &copy; 2015 By Nghi Nguyen
 		</footer>
 		<script src="js/jquery-1.11.2.js" ></script>
+		<script src="js/jquery-ui.min.js"></script>
+		<script src="js/underscore.js"></script>
+		<script src="js/gallery-slider.js"></script>
+		<script src="js/common.js"></script>
 	</body>
 </html>

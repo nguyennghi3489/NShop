@@ -78,10 +78,14 @@ nav.filter {
   width: 18%;
   float: left;
 }
-nav.filter ul li {
+nav.filter > ul > li > a {
+  display: block;
   border-bottom: 1px solid #ddd;
-  margin: 0px 0px 20px;
+  margin: 0px 0px 5px;
   padding: 0px 0px 3px;
+}
+nav.filter > ul > li ul li {
+  padding: 0px 20px;
 }
 @media only screen and (max-width: 1280px) {
   nav.filter {
@@ -90,7 +94,7 @@ nav.filter ul li {
     float: none;
     clear: both;
   }
-  nav.filter ul li {
+  nav.filter > ul > li {
     display: inline-block;
     border: 0px;
     padding: 0px 10px 0px 0px;
@@ -104,13 +108,10 @@ nav.filter ul li {
 .BoxSizing {
   -moz-box-sizing: border-box;
   /* Firefox 1, probably can drop this */
-
   -webkit-box-sizing: border-box;
   /* Safari 3-4, also probably droppable */
-
   box-sizing: border-box;
   /* Everything else */
-
 }
 .wrapper {
   max-width: 1280px;
@@ -119,39 +120,22 @@ nav.filter ul li {
   padding: 0 20px 0px 20px;
   -moz-box-sizing: border-box;
   /* Firefox 1, probably can drop this */
-
   -webkit-box-sizing: border-box;
   /* Safari 3-4, also probably droppable */
-
   box-sizing: border-box;
   /* Everything else */
-
   overflow: hidden;
   margin: 10px auto 30px;
   clear: both;
-}
-.BoxSizing {
-  -moz-box-sizing: border-box;
-  /* Firefox 1, probably can drop this */
-
-  -webkit-box-sizing: border-box;
-  /* Safari 3-4, also probably droppable */
-
-  box-sizing: border-box;
-  /* Everything else */
-
 }
 .row {
   margin: 0 -10px;
   -moz-box-sizing: border-box;
   /* Firefox 1, probably can drop this */
-
   -webkit-box-sizing: border-box;
   /* Safari 3-4, also probably droppable */
-
   box-sizing: border-box;
   /* Everything else */
-
 }
 .row:before,
 .row:after {
@@ -166,13 +150,10 @@ nav.filter ul li {
   min-height: 1px;
   -moz-box-sizing: border-box;
   /* Firefox 1, probably can drop this */
-
   -webkit-box-sizing: border-box;
   /* Safari 3-4, also probably droppable */
-
   box-sizing: border-box;
   /* Everything else */
-
 }
 .col-sm-25 {
   width: 25%;
@@ -230,6 +211,26 @@ button .btn-bg {
 button:hover .btn-bg {
   top: 0;
 }
+button.detail {
+  background: #54c1cf;
+  border-bottom: 3px solid #35acbb;
+}
+button.detail .btn-bg {
+  background: linear-gradient(to bottom, #b8e5eb, #7ccfda);
+}
+button.submit {
+  background: #474a6a;
+  border-bottom: 3px solid #33354b;
+}
+button.submit .btn-bg {
+  background: linear-gradient(to bottom, #14151e, #33354b);
+}
+button.large {
+  padding: 1em 5em;
+}
+button.small {
+  padding: 1em 1em;
+}
 .img-responsive {
   max-width: 100%;
   width: 100%;
@@ -258,6 +259,231 @@ table tbody tr:nth-child(odd) {
   background: #ddd;
   width: 100%;
   height: 50px;
+}
+.item-panel .row .item {
+  border: 1px solid #cbecf1;
+  text-align: center;
+  padding: 0em 0.2em 0.5em;
+}
+.item-panel .row .item h4 {
+  font-size: 1.4em;
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+.item-panel .row .item p {
+  text-align: center;
+  margin-bottom: 0.3em;
+}
+.item-panel .row .item strong {
+  font-size: 1.2em;
+  display: block;
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+.ngallery-slider {
+  width: 100%;
+  position: relative;
+}
+.ngallery-slider:after {
+  content: "";
+  display: table;
+  float: none;
+  clear: both;
+}
+.ngallery-slider:before {
+  content: "";
+  display: table;
+  float: none;
+  clear: both;
+}
+.ngallery-slider .nthumbslider {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+.ngallery-slider .nthumbslider li {
+  float: left;
+  margin-right: 5px;
+}
+.ngallery-slider .nthumbslider li a {
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: radial-gradient(75% 75%, #969696, rgba(255, 255, 255, 0));
+  border-radius: 16px;
+  opacity: .4;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.ngallery-slider .nthumbslider li a:hover {
+  background: -webkit-radial-gradient(75% 75%, #54c1cf, #ffffff, rgba(255, 255, 255, 0));
+  /* Safari 5.1 to 6.0 */
+  background: -o-radial-gradient(75% 75%, #54c1cf, #ffffff, rgba(255, 255, 255, 0));
+  /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(75% 75%, #54c1cf, #ffffff, rgba(255, 255, 255, 0));
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(75% 75%, #474a6a, #ffffff, rgba(255, 255, 255, 0));
+  /* Standard syntax */
+  border-radius: 16px;
+}
+.ngallery-slider .nthumbslider .active {
+  background: -webkit-radial-gradient(75% 75%, #54c1cf, #ffffff, rgba(255, 255, 255, 0));
+  /* Safari 5.1 to 6.0 */
+  background: -o-radial-gradient(75% 75%, #54c1cf, #ffffff, rgba(255, 255, 255, 0));
+  /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(75% 75%, #54c1cf, #ffffff, rgba(255, 255, 255, 0));
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(75% 75%, #474a6a, #ffffff, rgba(255, 255, 255, 0));
+  /* Standard syntax */
+  border-radius: 16px;
+}
+.ngallery-slider .control {
+  position: absolute;
+  width: 1000px;
+  top: 200px;
+  height: 92px;
+  overflow: hidden;
+}
+.ngallery-slider .control .button {
+  width: 34px;
+  height: 92px;
+  display: block;
+  position: absolute;
+  top: 0;
+  opacity: .4;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  background: url("../img/gallery-button.png") no-repeat;
+}
+.ngallery-slider .control .button:hover {
+  opacity: 1;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.ngallery-slider .control .prev {
+  width: 34px;
+  height: 92px;
+  display: block;
+  position: absolute;
+  top: 0;
+  opacity: .4;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  background: url("../img/gallery-button.png") no-repeat;
+  background-position: 0 0;
+  left: 0;
+}
+.ngallery-slider .control .prev:hover {
+  opacity: 1;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.ngallery-slider .control .next {
+  width: 34px;
+  height: 92px;
+  display: block;
+  position: absolute;
+  top: 0;
+  opacity: .4;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  background: url("../img/gallery-button.png") no-repeat;
+  background-position: -44px 0;
+  right: 0;
+}
+.ngallery-slider .control .next:hover {
+  opacity: 1;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+form {
+  font-family: Arial, Helvetica, sans-serif;
+}
+form .form-row {
+  font-size: 1em;
+  margin-bottom: 1em;
+}
+form .form-row label {
+  margin-right: 5px;
+  float: left;
+  width: 100px;
+}
+form .form-row input {
+  width: 300px;
+}
+form .form-row input[type="text"],
+form .form-row input[type="password"] {
+  outline: #f57246;
+  border: 0;
+  border: 1px solid #d0d2e0;
+  padding: 0.3em;
+  color: #474a6a;
+  font-size: 1em;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+form .form-row input[type="text"]:active,
+form .form-row input[type="password"]:active,
+form .form-row input[type="text"]:focus,
+form .form-row input[type="password"]:focus {
+  border: 1px solid #f57246;
+}
+form .form-row input[type="checkbox"] {
+  width: auto;
+}
+form .form-row #checkbox-1 {
+  display: none;
+}
+form .form-row #checkbox-1 + label {
+  color: red;
+}
+form .form-row #checkbox-1:checked + label {
+  color: blue;
+}
+form .form-row select {
+  border: 1px solid #474a6a;
+  font-size: 1em;
+  color: #474a6a;
+  outline: 0;
+}
+form .form-row select:active,
+form .form-row select:focus {
+  border: 1px solid #f57246;
+}
+form .form-row textarea {
+  outline: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 1px solid #d0d2e0;
+  font-size: 1em;
+  color: #474a6a;
+  width: 300px;
+  height: 200px;
+  resize: none;
+  display: inline-block;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+form .form-row textarea:active,
+form .form-row textarea:focus {
+  border: 1px solid #f57246;
 }
 main {
   float: right;

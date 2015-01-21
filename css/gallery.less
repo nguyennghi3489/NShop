@@ -1,12 +1,27 @@
-.trans (@trans) {
-	-webkit-transition: all @trans;
-    -moz-transition: all @trans;
-    -o-transition: all @trans;
-    transition: all @trans;
+@import "variables.less";
+@import "utilities.less";
+
+.radial-gradient(@position: 50% 50%; @x: white; @y: @base-color){
+	background: -webkit-radial-gradient(@arguments); /* Safari 5.1 to 6.0 */
+	background: -o-radial-gradient(@arguments); /* For Opera 11.6 to 12.0 */
+	background: -moz-radial-gradient(@arguments); /* For Firefox 3.6 to 15 */
+	background: radial-gradient(@arguments); /* Standard syntax */
 }
 .ngallery-slider {
-	width: 1000px;
+	width: 100%;
 	position: relative;
+	&:after{
+		content:"";
+		display:table;
+		float:none;
+		clear:both;
+	}
+	&:before{
+		content:"";
+		display:table;
+		float:none;
+		clear:both;
+	}
 	.nwrapper {
 	}
 	.nslider {
@@ -22,13 +37,20 @@
 				display: block;
 				width: 16px;
 				height: 16px;
-				background: url("../img/slider-not.png") no-repeat;
+				background: radial-gradient(75% 75%,rgba(150,150,150,1),rgba(255,255,255,0));
+				border-radius:16px;
 				opacity: .4;
 				.trans (.3s);
 				&:hover { .active;}
 			}
 		}
-		.active { background-image: url("../img/slider-not-hover.png"); opacity: 1; .trans (.3s);}
+		.active { 
+			background: -webkit-radial-gradient(75% 75%, @light-color,rgba(255,255,255,1),rgba(255,255,255,0)); /* Safari 5.1 to 6.0 */
+			background: -o-radial-gradient(75% 75%, @light-color,rgba(255,255,255,1),rgba(255,255,255,0)); /* For Opera 11.6 to 12.0 */
+			background: -moz-radial-gradient(75% 75%, @light-color,rgba(255,255,255,1),rgba(255,255,255,0)); /* For Firefox 3.6 to 15 */
+			background: radial-gradient(75% 75%, @dark-color,rgba(255,255,255,1),rgba(255,255,255,0)); /* Standard syntax */
+			border-radius:16px;
+		}
 	}
 	.control {
 		position: absolute;
