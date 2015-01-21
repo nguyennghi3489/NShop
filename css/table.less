@@ -1,3 +1,5 @@
+@import "variables.less";
+
 table{
 	width:100%;
 	max-width:100%;
@@ -7,8 +9,9 @@ table{
 				font-weight:bold;
 				text-align:left;
 				padding:5px 0px;
+				font-size:1.1em;
 			}
-			border-bottom:2px solid @x-dark-color;
+			border-bottom:1px solid lighten(@x-dark-color,30%);
 		}
 	}
 	tbody{
@@ -16,6 +19,9 @@ table{
 			td{
 				text-align:left;
 				padding:5px 0px;
+			}
+			&:nth-child(odd){
+				background:lighten(@x-light-color,25%);
 			}
 		}
 	}

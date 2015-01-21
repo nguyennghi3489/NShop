@@ -2,6 +2,7 @@
 h1 {
   font-size: 2em;
   margin: 0.5em 0;
+  color: #f57246;
 }
 h2 {
   font-size: 1.75em;
@@ -103,10 +104,13 @@ nav.filter ul li {
 .BoxSizing {
   -moz-box-sizing: border-box;
   /* Firefox 1, probably can drop this */
+
   -webkit-box-sizing: border-box;
   /* Safari 3-4, also probably droppable */
+
   box-sizing: border-box;
   /* Everything else */
+
 }
 .wrapper {
   max-width: 1280px;
@@ -115,22 +119,39 @@ nav.filter ul li {
   padding: 0 20px 0px 20px;
   -moz-box-sizing: border-box;
   /* Firefox 1, probably can drop this */
+
   -webkit-box-sizing: border-box;
   /* Safari 3-4, also probably droppable */
+
   box-sizing: border-box;
   /* Everything else */
+
   overflow: hidden;
   margin: 10px auto 30px;
   clear: both;
+}
+.BoxSizing {
+  -moz-box-sizing: border-box;
+  /* Firefox 1, probably can drop this */
+
+  -webkit-box-sizing: border-box;
+  /* Safari 3-4, also probably droppable */
+
+  box-sizing: border-box;
+  /* Everything else */
+
 }
 .row {
   margin: 0 -10px;
   -moz-box-sizing: border-box;
   /* Firefox 1, probably can drop this */
+
   -webkit-box-sizing: border-box;
   /* Safari 3-4, also probably droppable */
+
   box-sizing: border-box;
   /* Everything else */
+
 }
 .row:before,
 .row:after {
@@ -145,10 +166,13 @@ nav.filter ul li {
   min-height: 1px;
   -moz-box-sizing: border-box;
   /* Firefox 1, probably can drop this */
+
   -webkit-box-sizing: border-box;
   /* Safari 3-4, also probably droppable */
+
   box-sizing: border-box;
   /* Everything else */
+
 }
 .col-sm-25 {
   width: 25%;
@@ -215,16 +239,20 @@ table {
   max-width: 100%;
 }
 table thead tr {
-  border-bottom: 2px solid #00314c;
+  border-bottom: 1px solid #0094e5;
 }
 table thead tr th {
   font-weight: bold;
   text-align: left;
   padding: 5px 0px;
+  font-size: 1.1em;
 }
 table tbody tr td {
   text-align: left;
   padding: 5px 0px;
+}
+table tbody tr:nth-child(odd) {
+  background: #e9eff4;
 }
 .content {
   background: #ddd;
