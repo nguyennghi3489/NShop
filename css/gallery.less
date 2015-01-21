@@ -1,0 +1,64 @@
+.trans (@trans) {
+	-webkit-transition: all @trans;
+    -moz-transition: all @trans;
+    -o-transition: all @trans;
+    transition: all @trans;
+}
+.ngallery-slider {
+	width: 1000px;
+	position: relative;
+	.nwrapper {
+	}
+	.nslider {
+	}
+	.nthumbslider {
+		position: absolute;
+		bottom: 10px;
+		right: 10px;
+		li {
+			float: left;
+			margin-right: 5px;
+			a {
+				display: block;
+				width: 16px;
+				height: 16px;
+				background: url("../img/slider-not.png") no-repeat;
+				opacity: .4;
+				.trans (.3s);
+				&:hover { .active;}
+			}
+		}
+		.active { background-image: url("../img/slider-not-hover.png"); opacity: 1; .trans (.3s);}
+	}
+	.control {
+		position: absolute;
+		width: 1000px;
+		top: 200px;
+		height: 92px;
+		overflow: hidden;
+		.button {
+			width: 34px;
+			height: 92px;
+			display: block;
+			position: absolute;
+			top: 0;
+			opacity: .4;
+			.trans (.3s);
+			background: url("../img/gallery-button.png") no-repeat;
+			&:hover {
+				opacity: 1;
+				.trans (.3s);
+			}
+		}
+		.prev {
+			.button;
+			background-position: 0 0;
+			left: 0;
+		}
+		.next {
+			.button;
+			background-position: -44px 0;
+			right: 0;
+		}
+	}
+}
