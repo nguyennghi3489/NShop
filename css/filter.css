@@ -28,7 +28,7 @@ nav.filter > ul > li ul li {
   nav.filter > ul > li {
     display: inline-block;
     border: 0px;
-    width: 100px;
+    width: 80px;
     position: relative;
     float: left;
   }
@@ -45,6 +45,18 @@ nav.filter > ul > li ul li {
 }
 @media (max-width: 640px) {
   nav.filter {
-    display: none;
+    display: block;
+    width: 100%;
+    float: none;
+    clear: both;
+    margin-top: 20px;
+  }
+  nav.filter > ul > li {
+    display: block;
+    float: none;
+    width: 100%;
+  }
+  nav.filter > ul > li > ul {
+    position: relative;
   }
 }

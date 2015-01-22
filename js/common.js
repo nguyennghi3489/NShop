@@ -1,20 +1,20 @@
 $(function(){
 	$('.filter>ul > li > ul').click(function(e){
 	}).hide();
-	if($(window).width() > 1280){
+	if($(window).width() > 1280 || $(window).width() <= 640){
 		$('.filter>ul>li').unbind();
 		$('.filter>ul>li').bind({
 			click:function(){
 				var selfClick = $(this).find('ul').is(':visible');
 				if(selfClick){
-					$(this).parent().find('>li ul:visible').slideToggle();
+					$(this).parent().find('>li ul:visible').slideToggle('fast');
 					return;
 				}
-				$(this).parent().find('>li ul:visible').slideToggle();
-				$(this).find('ul').slideToggle();
+				$(this).parent().find('>li ul:visible').slideToggle('fast');
+				$(this).find('ul').slideToggle('fast');
 			}
 		})
-	}else if($(window).width() <=1280 ){
+	}else if($(window).width() <=1280){
 		$('.filter>ul>li').unbind();
 		$('.filter>ul>li').bind({
 			mouseenter:function(e){

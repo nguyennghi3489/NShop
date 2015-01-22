@@ -35,7 +35,7 @@ nav{
 				&>li{ 
 					display:inline-block;
 					border:0px;
-					width:100px;
+					width:80px;
 					position:relative;
 					float:left;
 					&>ul{
@@ -52,7 +52,21 @@ nav{
 			}
 		}
 		@media(max-width: @sm-screen){
-			display:none;
+			display:block;
+			width:100%;
+			float:none;
+			clear:both;
+			margin-top:20px;
+			&>ul{
+				&>li{
+					display:block;
+					float:none;
+					width:100%;
+					&>ul{
+						position:relative;
+					}
+				}
+			}
 		}
 	}
 }
