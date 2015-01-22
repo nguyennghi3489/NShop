@@ -78,6 +78,13 @@ nav.filter {
   width: 18%;
   float: left;
 }
+nav.filter a {
+  text-decoration: none;
+  color: #474a6a;
+}
+nav.filter a:hover {
+  color: #f57246;
+}
 nav.filter > ul > li > a {
   display: block;
   border-bottom: 1px solid #ddd;
@@ -85,9 +92,9 @@ nav.filter > ul > li > a {
   padding: 0px 0px 3px;
 }
 nav.filter > ul > li ul li {
-  padding: 0px 20px;
+  padding: 3px 20px;
 }
-@media only screen and (max-width: 1280px) {
+@media (max-width: 1280px) {
   nav.filter {
     display: block;
     width: 100%;
@@ -97,10 +104,22 @@ nav.filter > ul > li ul li {
   nav.filter > ul > li {
     display: inline-block;
     border: 0px;
-    padding: 0px 10px 0px 0px;
+    width: 100px;
+    position: relative;
+    float: left;
+  }
+  nav.filter > ul > li > ul {
+    position: absolute;
+    background: white;
+    width: 200%;
+    z-index: 2;
+  }
+  nav.filter > ul > li > ul li {
+    padding: 5px 5px;
+    position: relative;
   }
 }
-@media only screen and (max-width: 640px) {
+@media (max-width: 640px) {
   nav.filter {
     display: none;
   }
@@ -108,10 +127,13 @@ nav.filter > ul > li ul li {
 .BoxSizing {
   -moz-box-sizing: border-box;
   /* Firefox 1, probably can drop this */
+
   -webkit-box-sizing: border-box;
   /* Safari 3-4, also probably droppable */
+
   box-sizing: border-box;
   /* Everything else */
+
 }
 .wrapper {
   max-width: 1280px;
@@ -120,22 +142,39 @@ nav.filter > ul > li ul li {
   padding: 0 20px 0px 20px;
   -moz-box-sizing: border-box;
   /* Firefox 1, probably can drop this */
+
   -webkit-box-sizing: border-box;
   /* Safari 3-4, also probably droppable */
+
   box-sizing: border-box;
   /* Everything else */
+
   overflow: hidden;
   margin: 10px auto 30px;
   clear: both;
+}
+.BoxSizing {
+  -moz-box-sizing: border-box;
+  /* Firefox 1, probably can drop this */
+
+  -webkit-box-sizing: border-box;
+  /* Safari 3-4, also probably droppable */
+
+  box-sizing: border-box;
+  /* Everything else */
+
 }
 .row {
   margin: 0 -10px;
   -moz-box-sizing: border-box;
   /* Firefox 1, probably can drop this */
+
   -webkit-box-sizing: border-box;
   /* Safari 3-4, also probably droppable */
+
   box-sizing: border-box;
   /* Everything else */
+
 }
 .row:before,
 .row:after {
@@ -150,10 +189,13 @@ nav.filter > ul > li ul li {
   min-height: 1px;
   -moz-box-sizing: border-box;
   /* Firefox 1, probably can drop this */
+
   -webkit-box-sizing: border-box;
   /* Safari 3-4, also probably droppable */
+
   box-sizing: border-box;
   /* Everything else */
+
 }
 .col-sm-25 {
   width: 25%;
@@ -280,6 +322,17 @@ table tbody tr:nth-child(odd) {
   text-align: center;
   margin-bottom: 0.5em;
 }
+.BoxSizing {
+  -moz-box-sizing: border-box;
+  /* Firefox 1, probably can drop this */
+
+  -webkit-box-sizing: border-box;
+  /* Safari 3-4, also probably droppable */
+
+  box-sizing: border-box;
+  /* Everything else */
+
+}
 .ngallery-slider {
   width: 100%;
   position: relative;
@@ -320,23 +373,31 @@ table tbody tr:nth-child(odd) {
 .ngallery-slider .nthumbslider li a:hover {
   background: -webkit-radial-gradient(75% 75%, #54c1cf, #ffffff, rgba(255, 255, 255, 0));
   /* Safari 5.1 to 6.0 */
+
   background: -o-radial-gradient(75% 75%, #54c1cf, #ffffff, rgba(255, 255, 255, 0));
   /* For Opera 11.6 to 12.0 */
+
   background: -moz-radial-gradient(75% 75%, #54c1cf, #ffffff, rgba(255, 255, 255, 0));
   /* For Firefox 3.6 to 15 */
+
   background: radial-gradient(75% 75%, #474a6a, #ffffff, rgba(255, 255, 255, 0));
   /* Standard syntax */
+
   border-radius: 16px;
 }
 .ngallery-slider .nthumbslider .active {
   background: -webkit-radial-gradient(75% 75%, #54c1cf, #ffffff, rgba(255, 255, 255, 0));
   /* Safari 5.1 to 6.0 */
+
   background: -o-radial-gradient(75% 75%, #54c1cf, #ffffff, rgba(255, 255, 255, 0));
   /* For Opera 11.6 to 12.0 */
+
   background: -moz-radial-gradient(75% 75%, #54c1cf, #ffffff, rgba(255, 255, 255, 0));
   /* For Firefox 3.6 to 15 */
+
   background: radial-gradient(75% 75%, #474a6a, #ffffff, rgba(255, 255, 255, 0));
   /* Standard syntax */
+
   border-radius: 16px;
 }
 .ngallery-slider .control {
