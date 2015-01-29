@@ -16,6 +16,7 @@ header > nav {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+  font-size: 1.1em;
   float: right;
 }
 header > nav ul li {
@@ -32,13 +33,16 @@ header > nav ul li {
     margin: 0 auto;
     float: none;
     height: 90px;
-    background-size: 80%;
+    margin-bottom: 10px;
   }
   header nav {
+    background: #474a6a;
     top: 0;
     transform: none;
     float: none;
     text-align: center;
+    padding: 10px 0px;
+    color: white;
   }
   header nav ul {
     display: inline-table;

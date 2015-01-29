@@ -24,6 +24,10 @@ nav.filter > ul > li ul li {
     width: 100%;
     float: none;
     clear: both;
+    text-align: center;
+  }
+  nav.filter > ul {
+    display: inline-table;
   }
   nav.filter > ul > li {
     display: inline-block;
@@ -34,6 +38,7 @@ nav.filter > ul > li ul li {
   }
   nav.filter > ul > li > ul {
     position: absolute;
+    left: 0;
     background: white;
     width: 200%;
     z-index: 2;
@@ -41,6 +46,7 @@ nav.filter > ul > li ul li {
   nav.filter > ul > li > ul li {
     padding: 5px 5px;
     position: relative;
+    text-align: left;
   }
 }
 @media (max-width: 640px) {
@@ -49,14 +55,31 @@ nav.filter > ul > li ul li {
     width: 100%;
     float: none;
     clear: both;
-    margin-top: 20px;
+  }
+  nav.filter > ul {
+    display: block;
   }
   nav.filter > ul > li {
+    font-weight: bold;
     display: block;
     float: none;
     width: 100%;
   }
+  nav.filter > ul > li:first-child {
+    border-top: 1px solid #ddd;
+  }
+  nav.filter > ul > li > a {
+    margin: 0px;
+    padding: 5px 0 5px;
+  }
   nav.filter > ul > li > ul {
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
     position: relative;
+  }
+  nav.filter > ul > li > ul li {
+    font-weight: normal;
+    text-align: center;
   }
 }

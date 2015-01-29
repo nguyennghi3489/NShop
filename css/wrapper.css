@@ -21,3 +21,8 @@
   margin: 10px auto 30px;
   clear: both;
 }
+@media only screen and (max-width: 640px) {
+  .wrapper {
+    margin-top: 0px;
+  }
+}

@@ -1,0 +1,24 @@
+.item-panel .row {
+  margin-bottom: 0.75em;
+}
+.item-panel .row .item {
+  text-align: center;
+  padding: 1em 0.2em 0.5em;
+}
+.item-panel .row .item img {
+  width: 70%;
+}
+.item-panel .row .item h4 {
+  font-size: 1.4em;
+  text-align: center;
+  margin: 0 0 0.2em 0;
+}
+.item-panel .row .item p {
+  text-align: center;
+  margin-bottom: 0.1em;
+}
+.item-panel .row .item strong {
+  display: block;
+  text-align: center;
+  margin-bottom: 0.2em;
+}

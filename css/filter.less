@@ -31,7 +31,9 @@ nav{
 			width:100%;
 			float:none;
 			clear:both;
+			text-align:center;
 			&>ul{
+				display:inline-table;
 				&>li{ 
 					display:inline-block;
 					border:0px;
@@ -40,11 +42,13 @@ nav{
 					float:left;
 					&>ul{
 						position:absolute;
+						left:0;
 						background:white;
 						width:200%;
 						li{
 							padding:5px 5px;
 							position:relative;
+							text-align:left;
 						}
 						z-index:2;
 					}
@@ -56,13 +60,28 @@ nav{
 			width:100%;
 			float:none;
 			clear:both;
-			margin-top:20px;
 			&>ul{
+				display:block;
 				&>li{
+					&:first-child{
+						border-top:1px solid #ddd;
+					}
+					font-weight:bold;
 					display:block;
 					float:none;
 					width:100%;
+					&>a{
+						margin:0px;
+						padding:5px 0 5px;
+					}
 					&>ul{
+						width:100%;
+						li{
+							font-weight:normal;
+							text-align:center;
+						}
+						border-bottom:1px solid #ddd;
+						margin-bottom:10px;
 						position:relative;
 					}
 				}

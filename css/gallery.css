@@ -1,13 +1,10 @@
 .BoxSizing {
   -moz-box-sizing: border-box;
   /* Firefox 1, probably can drop this */
-
   -webkit-box-sizing: border-box;
   /* Safari 3-4, also probably droppable */
-
   box-sizing: border-box;
   /* Everything else */
-
 }
 .ngallery-slider {
   width: 100%;
@@ -49,31 +46,23 @@
 .ngallery-slider .nthumbslider li a:hover {
   background: -webkit-radial-gradient(75% 75%, #54c1cf, #ffffff, rgba(255, 255, 255, 0));
   /* Safari 5.1 to 6.0 */
-
   background: -o-radial-gradient(75% 75%, #54c1cf, #ffffff, rgba(255, 255, 255, 0));
   /* For Opera 11.6 to 12.0 */
-
   background: -moz-radial-gradient(75% 75%, #54c1cf, #ffffff, rgba(255, 255, 255, 0));
   /* For Firefox 3.6 to 15 */
-
   background: radial-gradient(75% 75%, #474a6a, #ffffff, rgba(255, 255, 255, 0));
   /* Standard syntax */
-
   border-radius: 16px;
 }
 .ngallery-slider .nthumbslider .active {
   background: -webkit-radial-gradient(75% 75%, #54c1cf, #ffffff, rgba(255, 255, 255, 0));
   /* Safari 5.1 to 6.0 */
-
   background: -o-radial-gradient(75% 75%, #54c1cf, #ffffff, rgba(255, 255, 255, 0));
   /* For Opera 11.6 to 12.0 */
-
   background: -moz-radial-gradient(75% 75%, #54c1cf, #ffffff, rgba(255, 255, 255, 0));
   /* For Firefox 3.6 to 15 */
-
   background: radial-gradient(75% 75%, #474a6a, #ffffff, rgba(255, 255, 255, 0));
   /* Standard syntax */
-
   border-radius: 16px;
 }
 .ngallery-slider .control {
