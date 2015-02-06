@@ -1,9 +1,9 @@
 var App = App || {};
 App.Templates = {};
 App.Templates.gallery = [
-	'<div class="nwrapper" style="width:1000px;height:500px;overflow:hidden;position:relative;">',
+	'<div class="nwrapper" style="width:<%= opts.width %>px;height:<%= opts.height %>px;overflow:hidden;position:relative;">',
 		'<ul class="nslider" style="width:<%=imageList.length * opts.width %>px<% %>;height:<%= opts.height %>px;position:absolute;top:0px;">',
-			'<% _.each(imageList,function(i){ %><li style="width:1000px;height:100%;background-image:url(<%= i %>);background-size: 100%;float:left"></li> <% }) %>',
+			'<% _.each(imageList,function(i){ %><li style="width:<%= opts.width %>px;height:100%;background-image:url(<%= i %>);background-size: 100%;float:left"></li> <% }) %>',
 		'</ul>',
 	'</div>',
 	'<div class="control">',
@@ -41,6 +41,8 @@ App.Templates.gallery = [
 				loaded = 0,
 				current = 0;
 				$that = $(this);
+			///Initialize
+			opts.width = $(this).width();
 			///Load Image 
 			$images.each(function(){
 				var image = new Image();
