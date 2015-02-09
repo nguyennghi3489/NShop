@@ -17,12 +17,17 @@ h4 {
   margin: 0.15em 0;
 }
 header {
-  max-width: 1280px;
   width: 100%;
   margin: 0px auto;
   height: 120px;
 }
-header > p {
+header .header-wrapper {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  height: 120px;
+}
+header .header-wrapper > p {
   float: left;
   width: 200px;
   margin: 0;
@@ -32,44 +37,61 @@ header > p {
 }
 header > nav {
   position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 1.1em;
+  /* This is used for vertical Middle 
+			top: 50%;
+			transform: translateY(-50%);
+		*/
+  font-size: .75em;
+  color: #fff;
+  background: #000;
+  width: 100%;
+  float: right;
+}
+header > nav ul {
   float: right;
 }
 header > nav ul li {
   display: inline-block;
   list-style-type: none;
-  padding: 0 20px;
+  padding: 6px 10px;
 }
 @media only screen and (max-width: 640px) {
   header {
     height: auto;
     overflow: hidden;
   }
-  header > p {
+  header .header-wrapper {
+    height: auto;
+  }
+  header .header-wrapper > p {
     margin: 0 auto;
     float: none;
     height: 90px;
     margin-bottom: 10px;
   }
-  header nav {
-    background: #474a6a;
+  header .header-wrapper:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  header > nav {
     top: 0;
     transform: none;
     float: none;
     text-align: center;
-    padding: 10px 0px;
-    color: white;
+    color: #fff;
+    background: #000;
+    overflow: hidden;
   }
-  header nav ul {
+  header > nav ul {
     display: inline-table;
     width: auto;
     white-space: nowrap;
     margin: 0 auto;
+    padding-right: 0px;
   }
-  header nav ul li {
-    padding: 0 15px;
+  header > nav ul li {
+    padding: 6px 15px;
   }
 }
 footer {
@@ -79,8 +101,12 @@ footer {
   text-align: center;
 }
 nav.filter {
-  width: 18%;
   float: left;
+  display: block;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  float: right;
 }
 nav.filter a {
   text-decoration: none;
@@ -98,36 +124,27 @@ nav.filter > ul > li > a {
 nav.filter > ul > li ul li {
   padding: 3px 20px;
 }
-@media (max-width: 1280px) {
-  nav.filter {
-    display: block;
-    width: 100%;
-    float: none;
-    clear: both;
-    text-align: center;
-  }
-  nav.filter > ul {
-    display: inline-table;
-  }
-  nav.filter > ul > li {
-    display: inline-block;
-    border: 0px;
-    width: 80px;
-    position: relative;
-    float: left;
-  }
-  nav.filter > ul > li > ul {
-    position: absolute;
-    left: 0;
-    background: white;
-    width: 200%;
-    z-index: 2;
-  }
-  nav.filter > ul > li > ul li {
-    padding: 5px 5px;
-    position: relative;
-    text-align: left;
-  }
+nav.filter > ul {
+  display: inline-table;
+}
+nav.filter > ul > li {
+  display: inline-block;
+  border: 0px;
+  width: 80px;
+  position: relative;
+  float: left;
+}
+nav.filter > ul > li > ul {
+  position: absolute;
+  left: 0;
+  background: white;
+  width: 200%;
+  z-index: 2;
+}
+nav.filter > ul > li > ul li {
+  padding: 5px 5px;
+  position: relative;
+  text-align: left;
 }
 @media (max-width: 640px) {
   nav.filter {
@@ -135,6 +152,7 @@ nav.filter > ul > li ul li {
     width: 100%;
     float: none;
     clear: both;
+    position: static;
   }
   nav.filter > ul {
     display: block;
@@ -166,13 +184,10 @@ nav.filter > ul > li ul li {
 .BoxSizing {
   -moz-box-sizing: border-box;
   /* Firefox 1, probably can drop this */
-
   -webkit-box-sizing: border-box;
   /* Safari 3-4, also probably droppable */
-
   box-sizing: border-box;
   /* Everything else */
-
 }
 .wrapper {
   max-width: 1280px;
@@ -181,13 +196,10 @@ nav.filter > ul > li ul li {
   padding: 0 20px 0px 20px;
   -moz-box-sizing: border-box;
   /* Firefox 1, probably can drop this */
-
   -webkit-box-sizing: border-box;
   /* Safari 3-4, also probably droppable */
-
   box-sizing: border-box;
   /* Everything else */
-
   overflow: hidden;
   margin: 10px auto 30px;
   clear: both;
@@ -197,28 +209,14 @@ nav.filter > ul > li ul li {
     margin-top: 0px;
   }
 }
-.BoxSizing {
-  -moz-box-sizing: border-box;
-  /* Firefox 1, probably can drop this */
-
-  -webkit-box-sizing: border-box;
-  /* Safari 3-4, also probably droppable */
-
-  box-sizing: border-box;
-  /* Everything else */
-
-}
 .row {
   margin: 0 -10px;
   -moz-box-sizing: border-box;
   /* Firefox 1, probably can drop this */
-
   -webkit-box-sizing: border-box;
   /* Safari 3-4, also probably droppable */
-
   box-sizing: border-box;
   /* Everything else */
-
 }
 .row:before,
 .row:after {
@@ -233,13 +231,10 @@ nav.filter > ul > li ul li {
   min-height: 1px;
   -moz-box-sizing: border-box;
   /* Firefox 1, probably can drop this */
-
   -webkit-box-sizing: border-box;
   /* Safari 3-4, also probably droppable */
-
   box-sizing: border-box;
   /* Everything else */
-
 }
 .col-sm-25 {
   width: 25%;
@@ -370,20 +365,15 @@ table tbody tr:nth-child(odd) {
   text-align: center;
   margin-bottom: 0.2em;
 }
-.BoxSizing {
-  -moz-box-sizing: border-box;
-  /* Firefox 1, probably can drop this */
-
-  -webkit-box-sizing: border-box;
-  /* Safari 3-4, also probably droppable */
-
-  box-sizing: border-box;
-  /* Everything else */
-
-}
 .ngallery-slider {
   width: 100%;
   position: relative;
+}
+@media only screen and (max-width: 640px) {
+  .ngallery-slider {
+    margin: 0px -20px;
+    width: auto;
+  }
 }
 .ngallery-slider:after {
   content: "";
@@ -400,7 +390,6 @@ table tbody tr:nth-child(odd) {
 .ngallery-slider .nwrapper {
   position: relative;
   overflow: hidden;
-  padding: 45px 15px 15px;
 }
 .ngallery-slider .nwrapper .nslider li {
   display: block;
@@ -434,39 +423,59 @@ table tbody tr:nth-child(odd) {
 .ngallery-slider .nthumbslider li a:hover {
   background: -webkit-radial-gradient(75% 75%, #54c1cf, #ffffff, rgba(255, 255, 255, 0));
   /* Safari 5.1 to 6.0 */
-
   background: -o-radial-gradient(75% 75%, #54c1cf, #ffffff, rgba(255, 255, 255, 0));
   /* For Opera 11.6 to 12.0 */
-
   background: -moz-radial-gradient(75% 75%, #54c1cf, #ffffff, rgba(255, 255, 255, 0));
   /* For Firefox 3.6 to 15 */
-
   background: radial-gradient(75% 75%, #474a6a, #ffffff, rgba(255, 255, 255, 0));
   /* Standard syntax */
-
   border-radius: 16px;
 }
 .ngallery-slider .nthumbslider .active {
   background: -webkit-radial-gradient(75% 75%, #54c1cf, #ffffff, rgba(255, 255, 255, 0));
   /* Safari 5.1 to 6.0 */
-
   background: -o-radial-gradient(75% 75%, #54c1cf, #ffffff, rgba(255, 255, 255, 0));
   /* For Opera 11.6 to 12.0 */
-
   background: -moz-radial-gradient(75% 75%, #54c1cf, #ffffff, rgba(255, 255, 255, 0));
   /* For Firefox 3.6 to 15 */
-
   background: radial-gradient(75% 75%, #474a6a, #ffffff, rgba(255, 255, 255, 0));
   /* Standard syntax */
-
   border-radius: 16px;
+}
+.ngallery-slider .nthumbslider.square .active {
+  background: #333;
+  border-radius: 0;
+  opacity: 0.4;
+}
+.ngallery-slider .nthumbslider.square a {
+  width: 30px;
+  height: 6px;
+  border-radius: 0;
+  background: #ddd;
+}
+.ngallery-slider .nthumbslider.square a:hover {
+  background: #333;
+  border-radius: 0;
+  opacity: 0.4;
+  opacity: 1;
+}
+@media only screen and (max-width: 640px) {
+  .ngallery-slider .nthumbslider.square a {
+    width: 20px;
+    height: 8px;
+  }
 }
 .ngallery-slider .control {
   position: absolute;
-  width: 1000px;
-  top: 200px;
-  height: 92px;
   overflow: hidden;
+  top: 50%;
+  height: 92px;
+  margin-top: -46px;
+}
+@media only screen and (max-width: 640px) {
+  .ngallery-slider .control {
+    display: none;
+  }
 }
 .ngallery-slider .control .button {
   width: 34px;
@@ -609,7 +618,7 @@ form .form-row textarea:focus {
 }
 main {
   float: right;
-  width: 80%;
+  width: 100%;
 }
 @media only screen and (max-width: 1280px) {
   main {

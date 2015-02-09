@@ -1,13 +1,10 @@
 .BoxSizing {
   -moz-box-sizing: border-box;
   /* Firefox 1, probably can drop this */
-
   -webkit-box-sizing: border-box;
   /* Safari 3-4, also probably droppable */
-
   box-sizing: border-box;
   /* Everything else */
-
 }
 .wrapper {
   max-width: 1280px;
@@ -16,13 +13,10 @@
   padding: 0 20px 0px 20px;
   -moz-box-sizing: border-box;
   /* Firefox 1, probably can drop this */
-
   -webkit-box-sizing: border-box;
   /* Safari 3-4, also probably droppable */
-
   box-sizing: border-box;
   /* Everything else */
-
   overflow: hidden;
   margin: 10px auto 30px;
   clear: both;

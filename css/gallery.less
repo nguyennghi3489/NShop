@@ -10,6 +10,10 @@
 .ngallery-slider {
 	width: 100%;
 	position: relative;
+	@media only screen and (max-width: @sm-screen){
+		margin:0px -20px;
+		width: auto;
+	}
 	&:after{
 		content:"";
 		display:table;
@@ -25,7 +29,6 @@
 	.nwrapper {
 		position:relative;
 		overflow:hidden;
-		padding: 45px 15px 15px;
 		.nslider {
 			li{
 				display:block;
@@ -63,13 +66,37 @@
 			background: radial-gradient(75% 75%, @dark-color,rgba(255,255,255,1),rgba(255,255,255,0)); /* Standard syntax */
 			border-radius:16px;
 		}
+		&.square{
+				.active{
+					background:#333;
+					border-radius:0;
+					opacity:0.4;
+				}
+			a {
+				width: 30px;
+				height: 6px;
+				border-radius:0;
+				background:#ddd;
+				&:hover{
+					.active;
+					opacity:1;
+				}
+				@media only screen and (max-width: @sm-screen){
+					width:20px;
+					height:8px;
+				}
+			}
+		}
 	}
 	.control {
 		position: absolute;
-		width: 1000px;
-		top: 200px;
-		height: 92px;
 		overflow: hidden;
+		top:50%;
+		height: 92px;
+		margin-top:-46px;
+		@media only screen and (max-width: @sm-screen){
+			display:none;
+		}
 		.button {
 			width: 34px;
 			height: 92px;

@@ -2,7 +2,6 @@
 
 nav{
 	&.filter{
-		width:18%;
 		float:left;
 		a{
 			text-decoration:none;
@@ -26,12 +25,11 @@ nav{
 				}
 			}
 		}
-		@media(max-width: @lg-screen){
 			display:block;
-			width:100%;
-			float:none;
-			clear:both;
 			text-align:center;
+			position:relative;
+			top: 50%;
+			float:right;
 			&>ul{
 				display:inline-table;
 				&>li{ 
@@ -54,12 +52,13 @@ nav{
 					}
 				}
 			}
-		}
+		
 		@media(max-width: @sm-screen){
 			display:block;
 			width:100%;
 			float:none;
 			clear:both;
+			position:static;
 			&>ul{
 				display:block;
 				&>li{

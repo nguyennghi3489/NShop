@@ -1,10 +1,15 @@
 header {
-  max-width: 1280px;
   width: 100%;
   margin: 0px auto;
   height: 120px;
 }
-header > p {
+header .header-wrapper {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  height: 120px;
+}
+header .header-wrapper > p {
   float: left;
   width: 200px;
   margin: 0;
@@ -14,43 +19,60 @@ header > p {
 }
 header > nav {
   position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 1.1em;
+  /* This is used for vertical Middle 
+			top: 50%;
+			transform: translateY(-50%);
+		*/
+  font-size: .75em;
+  color: #fff;
+  background: #000;
+  width: 100%;
+  float: right;
+}
+header > nav ul {
   float: right;
 }
 header > nav ul li {
   display: inline-block;
   list-style-type: none;
-  padding: 0 20px;
+  padding: 6px 10px;
 }
 @media only screen and (max-width: 640px) {
   header {
     height: auto;
     overflow: hidden;
   }
-  header > p {
+  header .header-wrapper {
+    height: auto;
+  }
+  header .header-wrapper > p {
     margin: 0 auto;
     float: none;
     height: 90px;
     margin-bottom: 10px;
   }
-  header nav {
-    background: #474a6a;
+  header .header-wrapper:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  header > nav {
     top: 0;
     transform: none;
     float: none;
     text-align: center;
-    padding: 10px 0px;
-    color: white;
+    color: #fff;
+    background: #000;
+    overflow: hidden;
   }
-  header nav ul {
+  header > nav ul {
     display: inline-table;
     width: auto;
     white-space: nowrap;
     margin: 0 auto;
+    padding-right: 0px;
   }
-  header nav ul li {
-    padding: 0 15px;
+  header > nav ul li {
+    padding: 6px 15px;
   }
 }
