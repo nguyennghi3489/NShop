@@ -2,20 +2,12 @@ header {
   width: 100%;
   margin: 0px auto;
   height: 120px;
+  clear: both;
 }
-header .header-wrapper {
-  max-width: 1280px;
-  width: 100%;
-  margin: 0 auto;
-  height: 120px;
-}
-header .header-wrapper > p {
-  float: left;
-  width: 200px;
-  margin: 0;
-  background: url('../img/logo.png') no-repeat;
-  height: 120px;
-  text-indent: -9999px;
+@media only screen and (max-width: 640px) {
+  header {
+    height: auto;
+  }
 }
 header > nav {
   position: relative;
@@ -27,7 +19,7 @@ header > nav {
   color: #fff;
   background: #000;
   width: 100%;
-  float: right;
+  overflow: hidden;
 }
 header > nav ul {
   float: right;
@@ -36,43 +28,4 @@ header > nav ul li {
   display: inline-block;
   list-style-type: none;
   padding: 6px 10px;
-}
-@media only screen and (max-width: 640px) {
-  header {
-    height: auto;
-    overflow: hidden;
-  }
-  header .header-wrapper {
-    height: auto;
-  }
-  header .header-wrapper > p {
-    margin: 0 auto;
-    float: none;
-    height: 90px;
-    margin-bottom: 10px;
-  }
-  header .header-wrapper:after {
-    content: "";
-    display: block;
-    clear: both;
-  }
-  header > nav {
-    top: 0;
-    transform: none;
-    float: none;
-    text-align: center;
-    color: #fff;
-    background: #000;
-    overflow: hidden;
-  }
-  header > nav ul {
-    display: inline-table;
-    width: auto;
-    white-space: nowrap;
-    margin: 0 auto;
-    padding-right: 0px;
-  }
-  header > nav ul li {
-    padding: 6px 15px;
-  }
 }

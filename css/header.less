@@ -4,21 +4,10 @@ header{
 	width:100%;
 	margin:0px auto;
 	height:120px;
-	.header-wrapper{
-		max-width:@wrapper-width;
-		width:100%;
-		margin:0 auto;
-		height:120px;
-		&>p{
-			float:left;
-			width:200px;
-			margin:0;
-			background:url('../img/logo.png') no-repeat;
-			height:120px;
-			text-indent:-9999px;
-		}
+	clear:both;
+	@media only screen and (max-width: @sm-screen){
+		height:auto;
 	}
-	
 	&>nav{
 		position: relative;
 		/* This is used for vertical Middle 
@@ -37,44 +26,7 @@ header{
 				padding:6px 10px;
 			}
 		}
-		float:right;
-
-	}
-	@media only screen and (max-width: @sm-screen){
-		height:auto;
 		overflow:hidden;
-		.header-wrapper{
-			height:auto;
-			&>p{
-				margin:0 auto;
-				float:none;
-				height:90px;
-				margin-bottom:10px;
-			}
-			&:after{
-				content:"";
-				display:block;
-				clear:both;
-			}
-		}
-		&>nav{
-				top:0;
-				transform:none;
-				float:none;
-				text-align:center;
-				color:#fff;
-				background:#000;
-				overflow:hidden;
-			ul{
-				display:inline-table;
-				width:auto;
-				white-space: nowrap;
-				margin:0 auto;
-				padding-right:0px;
-				li{
-					padding:6px 15px;
-				}
-			}
-		}
+
 	}
 }

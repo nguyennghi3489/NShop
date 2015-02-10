@@ -20,20 +20,12 @@ header {
   width: 100%;
   margin: 0px auto;
   height: 120px;
+  clear: both;
 }
-header .header-wrapper {
-  max-width: 1280px;
-  width: 100%;
-  margin: 0 auto;
-  height: 120px;
-}
-header .header-wrapper > p {
-  float: left;
-  width: 200px;
-  margin: 0;
-  background: url('../img/logo.png') no-repeat;
-  height: 120px;
-  text-indent: -9999px;
+@media only screen and (max-width: 640px) {
+  header {
+    height: auto;
+  }
 }
 header > nav {
   position: relative;
@@ -45,7 +37,7 @@ header > nav {
   color: #fff;
   background: #000;
   width: 100%;
-  float: right;
+  overflow: hidden;
 }
 header > nav ul {
   float: right;
@@ -55,130 +47,93 @@ header > nav ul li {
   list-style-type: none;
   padding: 6px 10px;
 }
-@media only screen and (max-width: 640px) {
-  header {
-    height: auto;
-    overflow: hidden;
-  }
-  header .header-wrapper {
-    height: auto;
-  }
-  header .header-wrapper > p {
-    margin: 0 auto;
-    float: none;
-    height: 90px;
-    margin-bottom: 10px;
-  }
-  header .header-wrapper:after {
-    content: "";
-    display: block;
-    clear: both;
-  }
-  header > nav {
-    top: 0;
-    transform: none;
-    float: none;
-    text-align: center;
-    color: #fff;
-    background: #000;
-    overflow: hidden;
-  }
-  header > nav ul {
-    display: inline-table;
-    width: auto;
-    white-space: nowrap;
-    margin: 0 auto;
-    padding-right: 0px;
-  }
-  header > nav ul li {
-    padding: 6px 15px;
-  }
-}
 footer {
   max-width: 1280px;
   width: 100%;
   margin: 0px auto 20px;
   text-align: center;
 }
-nav.filter {
-  float: left;
-  display: block;
-  text-align: center;
+.nav-wrapper {
+  max-width: 1280px;
   position: relative;
-  top: 50%;
+  width: 100%;
+  margin: 0 auto;
+  height: 120px;
+  clear: both;
+}
+.nav-wrapper > p {
+  float: left;
+  width: 200px;
+  margin: 0;
+  background: url('../img/logo.png') no-repeat;
+  height: 120px;
+  text-indent: -9999px;
+}
+.nav-wrapper > nav {
   float: right;
+  height: 100%;
+  display: table;
 }
-nav.filter a {
+.nav-wrapper > nav > ul {
+  overflow: hidden;
+  display: table-cell;
+  vertical-align: middle;
+}
+.nav-wrapper > nav > ul > li {
+  float: left;
+}
+.nav-wrapper > nav > ul > li a {
+  padding: 5px 15px;
   text-decoration: none;
-  color: #474a6a;
+  color: #777777;
 }
-nav.filter a:hover {
+.nav-wrapper > nav > ul > li a:hover {
+  transition: 0.5s ease-in-out;
   color: #f57246;
 }
-nav.filter > ul > li > a {
-  display: block;
-  border-bottom: 1px solid #ddd;
-  margin: 0px 0px 5px;
-  padding: 0px 0px 3px;
-}
-nav.filter > ul > li ul li {
-  padding: 3px 20px;
-}
-nav.filter > ul {
-  display: inline-table;
-}
-nav.filter > ul > li {
-  display: inline-block;
-  border: 0px;
-  width: 80px;
-  position: relative;
-  float: left;
-}
-nav.filter > ul > li > ul {
+.nav-wrapper > nav > ul > li > ul {
+  display: none;
   position: absolute;
+  top: 100px;
   left: 0;
+  width: 100%;
   background: white;
-  width: 200%;
-  z-index: 2;
+  border: 1px solid #fde1d7;
 }
-nav.filter > ul > li > ul li {
-  padding: 5px 5px;
-  position: relative;
-  text-align: left;
+.nav-wrapper > nav > ul > li > ul > li {
+  padding: 5px 0px;
 }
-@media (max-width: 640px) {
-  nav.filter {
-    display: block;
-    width: 100%;
+@media only screen and (max-width: 640px) {
+  .nav-wrapper {
+    height: auto;
+  }
+  .nav-wrapper > p {
     float: none;
-    clear: both;
+    background-size: 90%;
+    margin: 0 auto;
+    height: 90px;
+  }
+  .nav-wrapper > nav {
+    display: block;
+    float: none;
+    border: 1px solid #fde1d7;
+    margin: 0 20px;
+  }
+  .nav-wrapper > nav > ul > li {
+    display: block;
+    float: none;
+    padding: 5px 0;
+  }
+  .nav-wrapper > nav > ul > li > ul {
     position: static;
+    border: none;
+    margin: 5px 0px 5px 10px;
   }
-  nav.filter > ul {
-    display: block;
+  .nav-wrapper > nav > ul > li > ul a {
+    font-size: 0.9em;
   }
-  nav.filter > ul > li {
-    font-weight: bold;
-    display: block;
-    float: none;
-    width: 100%;
-  }
-  nav.filter > ul > li:first-child {
-    border-top: 1px solid #ddd;
-  }
-  nav.filter > ul > li > a {
-    margin: 0px;
-    padding: 5px 0 5px;
-  }
-  nav.filter > ul > li > ul {
-    width: 100%;
-    border-bottom: 1px solid #ddd;
-    margin-bottom: 10px;
-    position: relative;
-  }
-  nav.filter > ul > li > ul li {
-    font-weight: normal;
-    text-align: center;
+  .nav-wrapper > nav > ul > li > ul > li > ul {
+    margin: 5px 0px 5px 10px;
   }
 }
 .BoxSizing {
@@ -615,6 +570,9 @@ form .form-row textarea {
 form .form-row textarea:active,
 form .form-row textarea:focus {
   border: 1px solid #f57246;
+}
+body {
+  font-family: Helvetica, Arial, sans-serif;
 }
 main {
   float: right;
