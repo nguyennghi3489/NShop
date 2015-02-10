@@ -1,8 +1,8 @@
 header {
   width: 100%;
   margin: 0px auto;
-  height: 120px;
   clear: both;
+  background: white;
 }
 @media only screen and (max-width: 640px) {
   header {
