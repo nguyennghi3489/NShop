@@ -69,20 +69,29 @@ footer {
   height: 120px;
   text-indent: -9999px;
 }
+.nav-wrapper small {
+  font-size: 0.8em;
+  position: absolute;
+  top: 52%;
+  color: #ccc;
+  transform: translateY(-50%);
+}
 .nav-wrapper > nav {
   float: right;
   height: 100%;
-  display: table;
 }
 .nav-wrapper > nav > ul {
   overflow: hidden;
-  display: table-cell;
-  vertical-align: middle;
+  height: 100%;
 }
 .nav-wrapper > nav > ul > li {
+  height: 100%;
   float: left;
+  display: table;
 }
 .nav-wrapper > nav > ul > li a {
+  display: table-cell;
+  vertical-align: middle;
   padding: 5px 15px;
   text-decoration: none;
   color: #777777;
@@ -92,16 +101,51 @@ footer {
   color: #f57246;
 }
 .nav-wrapper > nav > ul > li > ul {
-  display: none;
+  opacity: 0;
   position: absolute;
+  font-size: 0.8125em;
   top: 120px;
+  visibility: hidden;
   left: 0;
   width: 100%;
   background: white;
   border: 1px solid #fde1d7;
+  transition: 0.5s ease-in-out;
 }
 .nav-wrapper > nav > ul > li > ul > li {
   padding: 5px 0px;
+}
+.nav-wrapper > nav > ul > li > ul > li a {
+  font-weight: bold;
+  display: block;
+  font-size: 1.3em;
+  cursor: default;
+  color: #f57246;
+}
+.nav-wrapper > nav > ul > li > ul > li ul {
+  margin-top: 5px;
+}
+.nav-wrapper > nav > ul > li > ul > li ul li {
+  padding: 5px 0px;
+}
+.nav-wrapper > nav > ul > li > ul > li ul li a {
+  font-weight: normal;
+  color: #777777;
+}
+.nav-wrapper > nav > ul > li > ul > li ul li a i {
+  padding-right: 10px;
+  font-size: 1.2em;
+}
+.nav-wrapper > nav > ul > li > ul > li ul li:hover {
+  background: #efefef;
+}
+.nav-wrapper > nav > ul > li > ul > li ul li:hover a {
+  transition: 0.5s ease-in-out;
+  color: #f57246;
+}
+.nav-wrapper > nav > ul > li:hover > ul {
+  opacity: 1;
+  visibility: visible;
 }
 @media only screen and (max-width: 640px) {
   .nav-wrapper {
@@ -125,6 +169,8 @@ footer {
     padding: 5px 0;
   }
   .nav-wrapper > nav > ul > li > ul {
+    opacity: 1;
+    display: none;
     position: static;
     border: none;
     margin: 5px 0px 5px 10px;
@@ -200,9 +246,15 @@ footer {
 .col-sm-50 {
   width: 50%;
 }
+.col-sm-100 {
+  width: 100%;
+}
 @media only screen and (min-width: 641px) {
   .col-md-25 {
     width: 25%;
+  }
+  .col-md-33_3 {
+    width: 33.33333333%;
   }
 }
 @media only screen and (min-width: 769px) {
@@ -211,6 +263,9 @@ footer {
   }
   .col-lg-50 {
     width: 50%;
+  }
+  .col-lg-33_3 {
+    width: 33.33333333%;
   }
 }
 button {
